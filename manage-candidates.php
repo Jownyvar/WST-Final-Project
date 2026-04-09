@@ -22,7 +22,7 @@
       <?php include 'sidebar.php'; ?>
       <div class="col-10 p-4">
         <h1 id="demo" style="font-weight: bold;">Manage Candidates</h1>
-        <p>Add, Update, and Delete candidates from the system.</p>
+        <p>Search, Add, Update, and Delete candidates from the system.</p>
 
         <button class="btn btn-primary mb-3" onclick="window.location.href='add-candidate.php'">
           Add Candidate

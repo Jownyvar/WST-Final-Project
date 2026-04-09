@@ -80,11 +80,8 @@
                     <br>
                     <button type="submit" name="add" class="btn btn-primary">Add Candidate</button>
                 </form>
-
             </div>
-
         </div>
-
     </div>
 
 </body>
