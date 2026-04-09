@@ -1,9 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <candidates>
-  <candidate id="1">
+  <candidate>
+    <id>1</id>
     <position>President</position>
-    <lastName>asdasd</lastName>
-    <firstName>sad</firstName>
-    <middleName>Asadasdsa.</middleName>
+    <lastName>Hofstadter</lastName>
+    <firstName>Leonard</firstName>
+    <middleName>Leakey</middleName>
+  </candidate>
+  <candidate>
+    <id>2</id>
+    <position>President</position>
+    <lastName>Cooper</lastName>
+    <firstName>Sheldon</firstName>
+    <middleName>Lee</middleName>
+  </candidate>
+  <candidate>
+    <id>3</id>
+    <position>Vice President</position>
+    <lastName>Smith</lastName>
+    <firstName>Jane</firstName>
+    <middleName>Alexander</middleName>
+  </candidate>
+  <candidate>
+    <id>4</id>
+    <position>Secretary</position>
+    <lastName>Brown</lastName>
+    <firstName>Michael</firstName>
+    <middleName>Benjamin</middleName>
+  </candidate>
+  <candidate>
+    <id>5</id>
+    <position>President</position>
+    <lastName>Johnson</lastName>
+    <firstName>Emily</firstName>
+    <middleName>Charles</middleName>
+  </candidate>
+  <candidate>
+    <id>6</id>
+    <position>Vice President</position>
+    <lastName>Garcia</lastName>
+    <firstName>David</firstName>
+    <middleName>David</middleName>
+  </candidate>
+  <candidate>
+    <id>7</id>
+    <position>Secretary</position>
+    <lastName>Wilson</lastName>
+    <firstName>Sarah</firstName>
+    <middleName>Elizabeth</middleName>
   </candidate>
 </candidates>
