@@ -27,43 +27,44 @@
         <button class="btn btn-primary mb-3" onclick="window.location.href='add-candidate.php'">
           Add Candidate
         </button>
-
-        <table class="table table-hover">
-          <tr>
-            <th style="background-color: #923030; color: white;">ID</th>
-            <th style="background-color: #923030; color: white;">Position</th>
-            <th style="background-color: #923030; color: white;">Last Name</th>
-            <th style="background-color: #923030; color: white;">First Name</th>
-            <th style="background-color: #923030; color: white;">Middle Name</th>
-            <th style="background-color: #923030; color: white;">Actions</th>
-          </tr>
-          <?php
-          $xml = new DOMDocument();
-          $xml->Load('candidates.xml');
-          $x = $xml->getElementsByTagName('candidates')->item(0);
-          $fr = $x->getElementsByTagName('candidate');
-          $i = 0;
-          $tf = 0;
-          foreach ($fr as $candidate) {
-            $id = $candidate->getElementsByTagName('id')->item(0)->nodeValue;
-            $position = $candidate->getElementsByTagName('position')->item(0)->nodeValue;
-            $lastName = $candidate->getElementsByTagName('lastName')->item(0)->nodeValue;
-            $firstName = $candidate->getElementsByTagName('firstName')->item(0)->nodeValue;
-            $middleName = $candidate->getElementsByTagName('middleName')->item(0)->nodeValue;
-            echo "<tr>";
-            echo "<td class='c-id'>$id</td>";
-            echo "<td class='c-position'>$position</td>";
-            echo "<td class='c-lastName'>$lastName</td>";
-            echo "<td class='c-firstName'>$firstName</td>";
-            echo "<td class='c-middleName'>$middleName</td>";
-            echo "<td>";
-            echo "<button id='edit-btn-$id' style='margin-right: 10px;' class='btn btn-sm btn-warning' onclick='window.location.href=\"edit-candidate.php?id=$id\"'>Edit</button>";
-            echo "<button id='delete-btn-$id' class='btn btn-sm btn-danger' onclick='showDeleteModal($id, \"$firstName\", \"$lastName\")'>Delete</button>";
-            echo "</td>";
-            echo "</tr>";
-          }
-          ?>
-        </table>
+        <div class="table-responsive-sm">
+          <table class="table table-hover">
+            <tr>
+              <th style="background-color: #923030; color: white;">ID</th>
+              <th style="background-color: #923030; color: white;">Position</th>
+              <th style="background-color: #923030; color: white;">Last Name</th>
+              <th style="background-color: #923030; color: white;">First Name</th>
+              <th style="background-color: #923030; color: white;">Middle Name</th>
+              <th style="background-color: #923030; color: white;">Actions</th>
+            </tr>
+            <?php
+            $xml = new DOMDocument();
+            $xml->Load('candidates.xml');
+            $x = $xml->getElementsByTagName('candidates')->item(0);
+            $fr = $x->getElementsByTagName('candidate');
+            $i = 0;
+            $tf = 0;
+            foreach ($fr as $candidate) {
+              $id = $candidate->getElementsByTagName('id')->item(0)->nodeValue;
+              $position = $candidate->getElementsByTagName('position')->item(0)->nodeValue;
+              $lastName = $candidate->getElementsByTagName('lastName')->item(0)->nodeValue;
+              $firstName = $candidate->getElementsByTagName('firstName')->item(0)->nodeValue;
+              $middleName = $candidate->getElementsByTagName('middleName')->item(0)->nodeValue;
+              echo "<tr>";
+              echo "<td class='c-id'>$id</td>";
+              echo "<td class='c-position'>$position</td>";
+              echo "<td class='c-lastName'>$lastName</td>";
+              echo "<td class='c-firstName'>$firstName</td>";
+              echo "<td class='c-middleName'>$middleName</td>";
+              echo "<td>";
+              echo "<button id='edit-btn-$id' style='margin-right: 10px;' class='btn btn-sm btn-warning' onclick='window.location.href=\"edit-candidate.php?id=$id\"'>Edit</button>";
+              echo "<button id='delete-btn-$id' class='btn btn-sm btn-danger' onclick='showDeleteModal($id, \"$firstName\", \"$lastName\")'>Delete</button>";
+              echo "</td>";
+              echo "</tr>";
+            }
+            ?>
+          </table>
+        </div>
       </div>
     </div>
   </div>
