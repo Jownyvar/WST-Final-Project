@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg" style="background-color: #7C1F1F;" data-bs-theme="light">
+<nav class="navbar navbar-expand-lg" style="background-color: #7C1F1F; padding: 5px 20px;" data-bs-theme="light">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.php" style="color: white; font-weight: bold; font-size: 1.5rem;">
         <img src="images/nav-bar-brand.svg" alt="Logo" class="d-inline-block align-text-top">

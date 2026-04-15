@@ -1,28 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <candidates>
-  
+  <candidate>
+    <id>1</id>
+    <position>President</position>
+    <lastName>Alvarez</lastName>
+    <firstName>Maria</firstName>
+    <middleName>Grace</middleName>
+  </candidate>
   <candidate>
     <id>2</id>
-    <position>President</position>
+    <position>Vice President</position>
     <lastName>Cooper</lastName>
     <firstName>Sheldon</firstName>
     <middleName>Lee</middleName>
   </candidate>
   <candidate>
     <id>3</id>
-    <position>Vice President</position>
+    <position>Secretary</position>
     <lastName>Smith</lastName>
     <firstName>Jane</firstName>
     <middleName>Alexander</middleName>
   </candidate>
-  
-  
-  
   <candidate>
-    <id>7</id>
-    <position>Secretary</position>
+    <id>4</id>
+    <position>Treasurer</position>
     <lastName>Wilson</lastName>
     <firstName>Sarah</firstName>
     <middleName>Elizabeth</middleName>
   </candidate>
-<candidate><id>2024110135</id><firstName>John Lloyd</firstName><middleName>Enriquez</middleName><lastName>Vargas</lastName><position>Board Member</position></candidate></candidates>
+  <candidate>
+    <id>5</id>
+    <position>Board Member</position>
+    <lastName>Vargas</lastName>
+    <firstName>John Lloyd</firstName>
+    <middleName>Enriquez</middleName>
+  </candidate>
+  <candidate>
+    <id>6</id>
+    <position>President</position>
+    <lastName>Diaz</lastName>
+    <firstName>Carla</firstName>
+    <middleName>May</middleName>
+  </candidate>
+  <candidate>
+    <id>7</id>
+    <position>Secretary</position>
+    <lastName>Flores</lastName>
+    <firstName>Rico</firstName>
+    <middleName>Jose</middleName>
+  </candidate>
+  <candidate>
+    <id>8</id>
+    <position>Vice President</position>
+    <lastName>Garcia</lastName>
+    <firstName>Lina</firstName>
+    <middleName>Mae</middleName>
+  </candidate>
+  <candidate>
+    <id>9</id>
+    <position>Treasurer</position>
+    <lastName>Lopez</lastName>
+    <firstName>David</firstName>
+    <middleName>Ray</middleName>
+  </candidate>
+  <candidate>
+    <id>10</id>
+    <position>Board Member</position>
+    <lastName>Reyes</lastName>
+    <firstName>Ana</firstName>
+    <middleName>Lou</middleName>
+  </candidate>
+</candidates>

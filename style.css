@@ -20,3 +20,9 @@ body {
 .nav-link.active img {
     filter: brightness(0) invert(1);
 }
+
+.nav-link.active {
+    background-color: #7C1F1F !important;
+    color: white !important;
+    
+}
