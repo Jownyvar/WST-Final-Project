@@ -89,8 +89,10 @@
   </div>
 
   <script>
+    var selectedCandidateId = null;
+
     function showDeleteModal(id, firstName, lastName) {
-      var selectedCandidateId = id;
+      selectedCandidateId = id;
       document.getElementById('modalCandidateId').textContent = id;
       document.getElementById('modalCandidateName').textContent = firstName + ' ' + lastName;
 

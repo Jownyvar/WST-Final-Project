@@ -16,20 +16,8 @@
     <middleName>Alexander</middleName>
   </candidate>
   
-  <candidate>
-    <id>5</id>
-    <position>President</position>
-    <lastName>Johnson</lastName>
-    <firstName>Emily</firstName>
-    <middleName>Charles</middleName>
-  </candidate>
-  <candidate>
-    <id>6</id>
-    <position>Vice President</position>
-    <lastName>Garcia</lastName>
-    <firstName>David</firstName>
-    <middleName>David</middleName>
-  </candidate>
+  
+  
   <candidate>
     <id>7</id>
     <position>Secretary</position>
