@@ -57,8 +57,8 @@
             echo "<td class='c-firstName'>$firstName</td>";
             echo "<td class='c-middleName'>$middleName</td>";
             echo "<td>";
-            echo "<button style='margin-right: 10px;' class='btn btn-sm btn-warning'>Edit</button>";
-            echo "<button class='btn btn-sm btn-danger'>Delete</button>";
+            echo "<button id='edit-btn-$id' style='margin-right: 10px;' class='btn btn-sm btn-warning' onclick='window.location.href=\"edit-candidate.php?id=$id\"'>Edit</button>";
+            echo "<button id='delete-btn-$id' class='btn btn-sm btn-danger' onclick='showDeleteModal($id, \"$firstName\", \"$lastName\")'>Delete</button>";
             echo "</td>";
             echo "</tr>";
           }
@@ -68,6 +68,42 @@
     </div>
   </div>
 
+  <div class="modal" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to delete this candidate?</p>
+          <p><strong>ID:</strong> <span id="modalCandidateId"></span></p>
+          <p><strong>Name:</strong> <span id="modalCandidateName"></span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showDeleteModal(id, firstName, lastName) {
+      var selectedCandidateId = id;
+      document.getElementById('modalCandidateId').textContent = id;
+      document.getElementById('modalCandidateName').textContent = firstName + ' ' + lastName;
+
+      const deleteModal = new bootstrap.Modal(document.getElementById('deleteModal'));
+      deleteModal.show();
+    }
+
+    function confirmDelete() {
+      if (selectedCandidateId) {
+        window.location.href = 'delete-candidate.php?id=' + selectedCandidateId;
+      }
+    }
+  </script>
 
 </body>
 

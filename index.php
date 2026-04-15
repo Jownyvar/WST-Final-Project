@@ -23,7 +23,7 @@
     <div class="row" style="padding-left: 10px;">
       <?php include 'sidebar.php'; ?>
       <div class="col-10 p-4">
-        <h1>Welcome, John Lloyd E. Vargas!</h1>
+        <h1><b>Welcome, Admin!</b></h1>
         <p>This is your dashboard where you can manage voters and candidates.</p>
       </div>
 

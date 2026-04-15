@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <candidates>
-  <candidate>
-    <id>1</id>
-    <position>President</position>
-    <lastName>Hofstadter</lastName>
-    <firstName>Leonard</firstName>
-    <middleName>Leakey</middleName>
-  </candidate>
+  
   <candidate>
     <id>2</id>
     <position>President</position>
@@ -21,13 +15,7 @@
     <firstName>Jane</firstName>
     <middleName>Alexander</middleName>
   </candidate>
-  <candidate>
-    <id>4</id>
-    <position>Secretary</position>
-    <lastName>Brown</lastName>
-    <firstName>Michael</firstName>
-    <middleName>Benjamin</middleName>
-  </candidate>
+  
   <candidate>
     <id>5</id>
     <position>President</position>
@@ -49,4 +37,4 @@
     <firstName>Sarah</firstName>
     <middleName>Elizabeth</middleName>
   </candidate>
-</candidates>
+<candidate><id>2024110135</id><firstName>John Lloyd</firstName><middleName>Enriquez</middleName><lastName>Vargas</lastName><position>Board Member</position></candidate></candidates>
