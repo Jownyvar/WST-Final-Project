@@ -23,7 +23,7 @@
       <div class="col-10 p-4">
         <h1 id="demo" style="font-weight: bold;">Manage Candidates</h1>
         <p>Search, Add, Update, and Delete candidates from the system.</p>
-
+        <hr>
         <button class="btn btn-primary mb-3" onclick="window.location.href='add-candidate.php'">
           Add Candidate
         </button>
@@ -32,6 +32,7 @@
             <tr>
               <th style="background-color: #923030; color: white;">ID</th>
               <th style="background-color: #923030; color: white;">Position</th>
+              <th style="background-color: #923030; color: white;">Pictures</th>
               <th style="background-color: #923030; color: white;">Last Name</th>
               <th style="background-color: #923030; color: white;">First Name</th>
               <th style="background-color: #923030; color: white;">Middle Name</th>
@@ -47,12 +48,14 @@
             foreach ($fr as $candidate) {
               $id = $candidate->getElementsByTagName('id')->item(0)->nodeValue;
               $position = $candidate->getElementsByTagName('position')->item(0)->nodeValue;
+              $image = $candidate->getElementsByTagName('image')->item(0)->nodeValue;
               $lastName = $candidate->getElementsByTagName('lastName')->item(0)->nodeValue;
               $firstName = $candidate->getElementsByTagName('firstName')->item(0)->nodeValue;
               $middleName = $candidate->getElementsByTagName('middleName')->item(0)->nodeValue;
               echo "<tr>";
               echo "<td class='c-id'>$id</td>";
               echo "<td class='c-position'>$position</td>";
+              echo "<td class='c-pictures'><img src='$image' alt='Candidate Image' style='width: 100px;'></td>";
               echo "<td class='c-lastName'>$lastName</td>";
               echo "<td class='c-firstName'>$firstName</td>";
               echo "<td class='c-middleName'>$middleName</td>";

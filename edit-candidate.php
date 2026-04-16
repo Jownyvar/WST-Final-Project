@@ -20,11 +20,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $lastName = $_POST['lastName'];
         $firstName = $_POST['firstName'];
         $middleName = $_POST['middleName'];
+        // $image = $_POST['image'];
 
         $candidateNode->getElementsByTagName('position')->item(0)->nodeValue = $position;
         $candidateNode->getElementsByTagName('lastName')->item(0)->nodeValue = $lastName;
         $candidateNode->getElementsByTagName('firstName')->item(0)->nodeValue = $firstName;
         $candidateNode->getElementsByTagName('middleName')->item(0)->nodeValue = $middleName;
+        // $candidateNode->getElementsByTagName('image')->item(0)->nodeValue = $image;
 
         $xml->save('candidates.xml');
         header('Location: manage-candidates.php');
@@ -47,6 +49,11 @@ $middleName = $candidateNode->getElementsByTagName('middleName')->item(0)->nodeV
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <style>
+        label {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -62,6 +69,7 @@ $middleName = $candidateNode->getElementsByTagName('middleName')->item(0)->nodeV
             <div class="col-10 p-4">
                 <h1 style="font-weight: bold;">Edit Candidate</h1>
                 <p>Update candidate details and save changes.</p>
+                <hr>
                 <form method="post" action="edit-candidate.php?id=<?php echo urlencode($id); ?>">
                     <div class="mb-3">
                         <label class="form-label">Position</label>
@@ -83,6 +91,7 @@ $middleName = $candidateNode->getElementsByTagName('middleName')->item(0)->nodeV
                                 echo 'selected'; ?>>Board
                                 Member</option>
                         </select>
+
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Last Name</label>
@@ -99,6 +108,11 @@ $middleName = $candidateNode->getElementsByTagName('middleName')->item(0)->nodeV
                         <input type="text" name="middleName" class="form-control"
                             value="<?php echo htmlspecialchars($middleName); ?>">
                     </div>
+                    <!-- <div class="mb-3">
+                        <label class="form-label">Change candidate's photo</label>
+                        <input class="form-control" type="file" id="candidatePhoto" name="candidatePhoto"
+                            accept="image/*">
+                    </div> -->
                     <button type="submit" class="btn btn-primary">Save Changes</button>
                     <button type="button" class="btn btn-secondary"
                         onclick="window.location.href='manage-candidates.php'">Cancel</button>

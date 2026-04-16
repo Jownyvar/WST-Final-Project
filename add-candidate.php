@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <style>
+        label {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,7 +21,21 @@
         crossorigin="anonymous"></script>
     <?php
     if (isset($_POST['add'])) {
+        $target_dir = "candidate-photos/";
+        $target_file = $target_dir . basename($_FILES["candidatePhoto"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+        $check = getimagesize($_FILES["candidatePhoto"]["tmp_name"]);
+        if ($check !== false) {
+            move_uploaded_file($_FILES["candidatePhoto"]["tmp_name"], $target_file);
+            $uploadOk = 1;
+        } else {
+            $uploadOk = 0;
+        }
+
         $id = $_POST['id'];
+        $image = $target_file;
         $firstName = $_POST['firstName'];
         $middleName = $_POST['middleName'];
         $lastName = $_POST['lastName'];
@@ -26,6 +45,7 @@
         $xml->load('candidates.xml');
         $newCandidate = $xml->createElement('candidate');
         $newCandidate->appendChild($xml->createElement('id', $id));
+        $newCandidate->appendChild($xml->createElement('image', $image));
         $newCandidate->appendChild($xml->createElement('firstName', $firstName));
         $newCandidate->appendChild($xml->createElement('middleName', $middleName));
         $newCandidate->appendChild($xml->createElement('lastName', $lastName));
@@ -44,7 +64,8 @@
                 <h1 style="font-weight: bold;">Add Candidate</h1>
                 <p>Fill out the form below to add a new candidate to the system.</p>
                 <hr style="border: 3px solid #7C1F1F;">
-                <form method="POST">
+
+                <form method="POST" enctype="multipart/form-data">
                     <span class="mb-3">
                         <label for="registerIDCandidate" class="form-label">ID</label>
                         <input name="id" type="number" class="form-control" id="registerIDCandidate"
@@ -69,14 +90,21 @@
                             aria-describedby="lastNameHelp" required>
                     </span>
                     <br>
+                    <label for="position">Select candidate's position</label>
                     <select name="position" class="form-select" aria-label="Default select example">
-                        <option selected>Candidate's Position</option>
+                        <option id="position" selected>Position</option>
                         <option value="President">President</option>
                         <option value="Vice President">Vice President</option>
                         <option value="Secretary">Secretary</option>
                         <option value="Treasurer">Treasurer</option>
                         <option value="Board Member">Board Member</option>
                     </select>
+                    <br>
+                    <div class="mb-3">
+                        <label class="form-label">Upload candidate's photo</label>
+                        <input class="form-control" type="file" id="candidatePhoto" name="candidatePhoto"
+                            accept="image/*">
+                    </div>
                     <br>
                     <button type="submit" name="add" class="btn btn-primary">Add Candidate</button>
                 </form>

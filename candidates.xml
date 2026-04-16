@@ -3,6 +3,7 @@
   <candidate>
     <id>1</id>
     <position>Treasurer</position>
+    <image>candidate-photos/998f41fc4c63e69c06b99a6e03629815.jpg</image>
     <lastName>Jenny</lastName>
     <firstName>Alvarez</firstName>
     <middleName>Albarado</middleName>
@@ -10,6 +11,7 @@
   <candidate>
     <id>2</id>
     <position>Vice President</position>
+    <image>candidate-photos/439561.jpg</image>
     <lastName>Cooper</lastName>
     <firstName>Sheldon</firstName>
     <middleName>Lee</middleName>
@@ -17,6 +19,7 @@
   <candidate>
     <id>3</id>
     <position>Secretary</position>
+    <image>candidate-photos/images (1).jpg</image>
     <lastName>Smith</lastName>
     <firstName>Jane</firstName>
     <middleName>Alexander</middleName>
@@ -24,6 +27,7 @@
   <candidate>
     <id>4</id>
     <position>Treasurer</position>
+    <image>candidate-photos/images (3).jpg</image>
     <lastName>Wilson</lastName>
     <firstName>Sarah</firstName>
     <middleName>Elizabeth</middleName>
@@ -31,6 +35,7 @@
   <candidate>
     <id>5</id>
     <position>Board Member</position>
+    <image>candidate-photos/images (6).jpg</image>
     <lastName>Vargas</lastName>
     <firstName>John Lloyd</firstName>
     <middleName>Enriquez</middleName>
@@ -38,6 +43,7 @@
   <candidate>
     <id>6</id>
     <position>President</position>
+    <image>candidate-photos/images (5).jpg</image>
     <lastName>Diaz</lastName>
     <firstName>Carla</firstName>
     <middleName>May</middleName>
@@ -45,6 +51,7 @@
   <candidate>
     <id>7</id>
     <position>Secretary</position>
+    <image>candidate-photos/60fdb7c19b90a52d6253098e5df147e9.jpg</image>
     <lastName>Flores</lastName>
     <firstName>Rico</firstName>
     <middleName>Jose</middleName>
@@ -52,6 +59,7 @@
   <candidate>
     <id>8</id>
     <position>Vice President</position>
+    <image>candidate-photos/images (1).jpg</image>
     <lastName>Garcia</lastName>
     <firstName>Lina</firstName>
     <middleName>Mae</middleName>
@@ -59,15 +67,17 @@
   <candidate>
     <id>9</id>
     <position>Treasurer</position>
+    <image>candidate-photos/images (2).jpg</image>
     <lastName>Lopez</lastName>
     <firstName>David</firstName>
     <middleName>Ray</middleName>
   </candidate>
   <candidate>
     <id>10</id>
-    <position>Board Member</position>
-    <lastName>Reyes</lastName>
-    <firstName>Ana</firstName>
-    <middleName>Lou</middleName>
+    <firstName>Reyes</firstName>
+    <image>candidate-photos/images (4).jpg</image>
+    <middleName>Ana</middleName>
+    <lastName>Lou</lastName>
+    <position>Treasurer</position>
   </candidate>
-</candidates>
+<candidate><id>11</id><image>candidate-photos/5586dd721dc375d4efd925325232adff.jpg</image><firstName>James</firstName><middleName>Enriquez</middleName><lastName>Jacko</lastName><position>President</position></candidate><candidate><id>12</id><image>candidate-photos/553a602450aaf116215f5aa0fe8f88c6.jpg</image><firstName>Rajesh</firstName><middleName>Ramayan</middleName><lastName>Koothrapali</lastName><position>Board Member</position></candidate></candidates>
