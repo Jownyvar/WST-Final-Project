@@ -26,21 +26,21 @@
         <hr>
 
         <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px;">
-            <button class="btn btn-primary" onclick="window.location.href='add-candidate.php'">
-              Add Candidate
-            </button>
+          <button class="btn btn-primary" onclick="window.location.href='add-candidate.php'">
+            Add Candidate
+          </button>
 
-            <form method="GET" action="manage-candidates.php" style="display: flex; align-items: center; gap: 10px;">
-                <label style="font-weight: bold; white-space: nowrap;">Search candidate:</label>
-                <input type="text" name="search" placeholder="Enter name or position..." 
-                       style="padding: 6px; border: 1px solid #ccc; border-radius: 4px; width: 300px;"
-                       value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
-                <button type="submit" class="btn btn-outline-dark" style="font-weight: bold;">Go</button>
-                
-                <?php if(isset($_GET['search']) && $_GET['search'] !== ''): ?>
-                    <a href="manage-candidates.php" style="color: #666; font-size: 13px; text-decoration: none;">[Clear]</a>
-                <?php endif; ?>
-            </form>
+          <form method="GET" action="manage-candidates.php" style="display: flex; align-items: center; gap: 10px;">
+            <label style="font-weight: bold; white-space: nowrap;">Search candidate:</label>
+            <input type="text" name="search" placeholder="Enter name or position..."
+              style="padding: 6px; border: 1px solid #ccc; border-radius: 4px; width: 300px;"
+              value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>">
+            <button type="submit" class="btn btn-outline-dark" style="font-weight: bold;">Go</button>
+
+            <?php if (isset($_GET['search']) && $_GET['search'] !== ''): ?>
+              <a href="manage-candidates.php" style="color: #666; font-size: 13px; text-decoration: none;">[Clear]</a>
+            <?php endif; ?>
+          </form>
         </div>
 
         <div class="table-responsive-sm">
@@ -62,8 +62,7 @@
               $xml->Load('candidates.xml');
               $x = $xml->getElementsByTagName('candidates')->item(0);
               $fr = $x->getElementsByTagName('candidate');
-              
-              // Get search term
+
               $searchTerm = isset($_GET['search']) ? strtolower(trim($_GET['search'])) : '';
 
               foreach ($fr as $candidate) {
@@ -74,23 +73,21 @@
                 $firstName = $candidate->getElementsByTagName('firstName')->item(0)->nodeValue;
                 $middleName = $candidate->getElementsByTagName('middleName')->item(0)->nodeValue;
 
-                // Create a string to check against the search term
                 $searchableText = strtolower($position . " " . $firstName . " " . $middleName . " " . $lastName);
 
-                // Only display the row if search is empty or a match is found
                 if ($searchTerm == '' || strpos($searchableText, $searchTerm) !== false) {
-                    echo "<tr>";
-                    echo "<td class='c-id'>$id</td>";
-                    echo "<td class='c-position'>$position</td>";
-                    echo "<td class='c-pictures'><img src='$image' alt='Candidate Image' style='width: 100px;'></td>";
-                    echo "<td class='c-lastName'>$lastName</td>";
-                    echo "<td class='c-firstName'>$firstName</td>";
-                    echo "<td class='c-middleName'>$middleName</td>";
-                    echo "<td>";
-                    echo "<button id='edit-btn-$id' style='margin-right: 10px;' class='btn btn-sm btn-warning' onclick='window.location.href=\"edit-candidate.php?id=$id\"'>Edit</button>";
-                    echo "<button id='delete-btn-$id' class='btn btn-sm btn-danger' onclick='showDeleteModal($id, \"$firstName\", \"$lastName\")'>Delete</button>";
-                    echo "</td>";
-                    echo "</tr>";
+                  echo "<tr>";
+                  echo "<td class='c-id'>$id</td>";
+                  echo "<td class='c-position'>$position</td>";
+                  echo "<td class='c-pictures'><img src='$image' alt='Candidate Image' style='width: 100px;'></td>";
+                  echo "<td class='c-lastName'>$lastName</td>";
+                  echo "<td class='c-firstName'>$firstName</td>";
+                  echo "<td class='c-middleName'>$middleName</td>";
+                  echo "<td>";
+                  echo "<button id='edit-btn-$id' style='margin-right: 10px;' class='btn btn-sm btn-warning' onclick='window.location.href=\"edit-candidate.php?id=$id\"'>Edit</button>";
+                  echo "<button id='delete-btn-$id' class='btn btn-sm btn-danger' onclick='showDeleteModal($id, \"$firstName\", \"$lastName\")'>Delete</button>";
+                  echo "</td>";
+                  echo "</tr>";
                 }
               }
               ?>
