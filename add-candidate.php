@@ -103,7 +103,7 @@
                     <div class="mb-3">
                         <label class="form-label">Upload candidate's photo</label>
                         <input class="form-control" type="file" id="candidatePhoto" name="candidatePhoto"
-                            accept="image/*">
+                            accept="image/*" required>
                     </div>
                     <br>
                     <button type="submit" name="add" class="btn btn-primary">Add Candidate</button>
