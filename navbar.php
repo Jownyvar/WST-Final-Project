@@ -10,23 +10,5 @@
     <a class="navbar-brand text-white fw-bold fs-4" href="index.php">
       <img src="images/nav-bar-brand.svg" alt="Logo" class="d-inline-block align-text-top">
     </a>
-
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item dropdown">
-        <a id="nav-admin-name" class="nav-link dropdown-toggle text-white" href="#" role="button"
-          data-bs-toggle="dropdown" aria-expanded="false">
-          Vargas, John Lloyd E.
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">Account</a></li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
-          <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
-        </ul>
-      </li>
-    </ul>
-
-
   </div>
 </nav>
