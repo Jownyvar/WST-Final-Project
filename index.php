@@ -41,6 +41,15 @@
           <div class="col-md-4">
             <div class="card h-100 text-center p-3">
               <div class="d-flex justify-content-center mb-3">
+                <div class="avatar">NE</div>
+              </div>
+              <h5>Nicole S. Echevarria</h5>
+              <p>Developer</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 text-center p-3">
+              <div class="d-flex justify-content-center mb-3">
                 <div class="avatar">JV</div>
               </div>
               <h5>John Lloyd E. Vargas</h5>
@@ -48,15 +57,6 @@
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="card h-100 text-center p-3">
-              <div class="d-flex justify-content-center mb-3">
-                <div class="avatar">NE</div>
-              </div>
-              <h5>Nicole S. Echevarria</h5>
-              <p>Developer</p>
-            </div>
-          </div>
         </div>
         <hr>
         <p class="text-muted" style="font-weight: bold;">PROFESSOR</p>
